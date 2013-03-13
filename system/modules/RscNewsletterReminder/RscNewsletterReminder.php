@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2012 Leo Feyer
+ * Copyright (C) 2005-2013 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,11 +21,10 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2012
+ * @copyright  Cliff Parnitzky 2012-2013
  * @author     Cliff Parnitzky
  * @package    RscNewsletterReminder
  * @license    LGPL
- * @filesource
  */
 
 /**
@@ -177,16 +176,40 @@ class RscNewsletterReminder extends Backend
 	}
 	
 	/**
-	 * Chechs if the time lead is reached, means if act date plus time lead = deadline.
+	 * Checks if the time lead is reached, means if act date plus time lead = deadline.
 	 */
 	private function timeleadReached ()
+	{
+		return $this->getDaysTillNextSending() == $GLOBALS['TL_CONFIG']['rscNewsletterReminderLeadtime'];
+	}
+	
+	/**
+	 * Get the days till next sending.
+	 */
+	private function getDaysTillNextSending ()
 	{
 		$actTime = time();
 		$today = $this->getTodayDate($actTime);
 		$deadline = $this->getDeadlineDate($actTime);
-		$diffDays = ($deadline - $today) / 3600 / 24;
-		return $diffDays == $GLOBALS['TL_CONFIG']['rscNewsletterReminderLeadtime'];
+		return (($deadline - $today) / 3600 / 24);
 	}
+	
+		/**
+	 * Replaces the additional efg inserttags 
+	 */
+	public function replaceExternalInserttags($strTag)
+	{
+		$strTag = explode('::', $strTag);
+		if ($strTag[0] == "rscnewsletter")
+		{
+			if ($strTag[1] == "next")
+			{
+				return $this->getDaysTillNextSending();
+			}
+		}
+		return false;
+	}
+
 }
 
 ?>

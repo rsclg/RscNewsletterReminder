@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2012 Leo Feyer
+ * Copyright (C) 2005-2013 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,20 +21,18 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2012
+ * @copyright  Cliff Parnitzky 2012-2013
  * @author     Cliff Parnitzky
  * @package    RscNewsletterReminder
  * @license    LGPL
- * @filesource
- */
-
-/**
- * -------------------------------------------------------------------------
- * CRON
- * -------------------------------------------------------------------------
  */
 
 // Daily checking if deadline minus leadtime is reached and sending the email
 $GLOBALS['TL_CRON']['daily'][] = array('RscNewsletterReminder', 'sendReminderMail');
+
+/**
+ * Adding replaceInsertTags-Hook to replace the additional member inserttags
+ */
+$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('RscNewsletterReminder', 'replaceExternalInserttags');
 
 ?>
