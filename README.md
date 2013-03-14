@@ -27,4 +27,6 @@ Compatibility
 Inserttags
 ----------
 
-- `{{rscnewsletter::next}}` - Liefert die Anzahl Tage bis zum nächsten Versand (Stichtag).
+- `{{rscnewsletter::remainingdays}}` - Liefert die Anzahl Tage bis zum nächsten Versand (Stichtag).
+- `{{rscnewsletter::deadline}}` - Liefert den Stichtag.
+- `{{rscnewsletter::deadline::date}}` - Liefert den nächsten Stichtag als Datum (Formatiert nach dem System Datumsformat).

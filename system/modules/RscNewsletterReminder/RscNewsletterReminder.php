@@ -191,7 +191,7 @@ class RscNewsletterReminder extends Backend
 		$actTime = time();
 		$today = $this->getTodayDate($actTime);
 		$deadline = $this->getDeadlineDate($actTime);
-		return (($deadline - $today) / 3600 / 24);
+		return ceil(($deadline - $today) / 3600 / 24);
 	}
 	
 		/**
@@ -202,9 +202,20 @@ class RscNewsletterReminder extends Backend
 		$strTag = explode('::', $strTag);
 		if ($strTag[0] == "rscnewsletter")
 		{
-			if ($strTag[1] == "next")
+			if ($strTag[1] == "remainingdays")
 			{
 				return $this->getDaysTillNextSending();
+			}
+			else if ($strTag[1] == "deadline")
+			{
+				if ($strTag[2] == "date")
+				{
+					return date($GLOBALS['TL_CONFIG']['dateFormat'], $this->getDeadlineDate(time()));
+				}
+				else
+				{
+					return $GLOBALS['TL_CONFIG']['rscNewsletterReminderDeadline'];
+				}
 			}
 		}
 		return false;
