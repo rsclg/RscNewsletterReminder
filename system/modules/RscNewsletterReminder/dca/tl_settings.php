@@ -30,7 +30,7 @@
 /**
  * Add to palette
  */
-$GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] .= ';{rscNewsletterReminder_legend},rscNewsletterReminderDeadline, rscNewsletterReminderLeadtime, rscNewsletterReminderReceiverGroups, rscNewsletterReminderEmailReceiver, rscNewsletterReminderEmailSubject, rscNewsletterReminderEmailContent;';
+$GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] .= ';{rscNewsletterReminder_legend},rscNewsletterReminderDeadline, rscNewsletterReminderLeadtime, rscNewsletterReminderReceiverGroups, rscNewsletterReminderEmailSenderAddress, rscNewsletterReminderEmailSenderName, rscNewsletterReminderEmailSubject, rscNewsletterReminderEmailContent;';
 
 /**
  * Add fields
@@ -60,12 +60,28 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['rscNewsletterReminderReceiverGroups
 	'eval'                    => array('mandatory'=>true, 'tl_class'=>'clr', 'multiple'=>true)
 );
 
+$GLOBALS['TL_DCA']['tl_settings']['fields']['rscNewsletterReminderEmailSenderAddress'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderEmailSenderAddress'],
+	'exclude'                 => true,
+	'inputType'               => 'text',
+	'eval'                    => array('mandatory'=>true, 'rgxp' => 'email','maxlength'=>128, 'tl_class'=>'w50 clr')
+);
+
+$GLOBALS['TL_DCA']['tl_settings']['fields']['rscNewsletterReminderEmailSenderName'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderEmailSenderName'],
+	'exclude'                 => true,
+	'inputType'               => 'text',
+	'eval'                    => array('rgxp' => 'extnd','maxlength'=>128, 'tl_class'=>'w50')
+);
+
 $GLOBALS['TL_DCA']['tl_settings']['fields']['rscNewsletterReminderEmailSubject'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderEmailSubject'],
 	'inputType'               => 'text',
 	'reference'               => &$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder']['help']['inserttags'],
-	'eval'                    => array('mandatory'=>true, 'allowHtml'=>true, 'helpwizard'=>true)
+	'eval'                    => array('mandatory'=>true, 'allowHtml'=>true, 'helpwizard'=>true, 'tl_class'=>'clr')
 );
 
 $GLOBALS['TL_DCA']['tl_settings']['fields']['rscNewsletterReminderEmailContent'] = array
@@ -73,7 +89,7 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['rscNewsletterReminderEmailContent']
 	'label'                   => &$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderEmailContent'],
 	'inputType'               => 'textarea',
 	'reference'               => &$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder']['help']['inserttags'],
-	'eval'                    => array('mandatory'=>true, 'rte'=>'tinyMCE', 'allowHtml'=>true, 'helpwizard'=>true)
+	'eval'                    => array('mandatory'=>true, 'rte'=>'tinyMCE', 'allowHtml'=>true, 'helpwizard'=>true, 'tl_class'=>'clr')
 );
 
 ?>

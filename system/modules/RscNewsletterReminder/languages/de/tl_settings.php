@@ -30,12 +30,14 @@
 /**
  * fields
  */
-$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder_legend']        = "RSC Newsletter Erinnerung";
-$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderDeadline']       = array('Stichtag', 'Wählen Sie den Tag des Monats, wann die Erinnerung gesendet werden soll.');
-$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderLeadtime']       = array('Vorlaufzeit', 'Wählen Sie die Anzahl Tage, wann die Erinnerung vor dem Stichtag gesendet werden soll.');
-$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderReceiverGroups'] = array('Empfängergruppe(n)', 'Wählen Sie die Mitgliedergruppe(n), für welche die Newsletter Erinnerung gesendet werden soll.');
-$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderEmailSubject']   = array('E-Mail Betreff', 'Geben Sie den Betreff für die E-Mail ein. Die Verwendung von Inserttags ist möglich.');
-$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderEmailContent']   = array('E-Mail Inhalt', 'Geben Sie den HTML Inhalt für die E-Mail ein. Dieser wird automatisch als Text umgewandelt. So sind HTML und Text Emails gewährleistet. Die Verwendung von Inserttags ist möglich.');
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder_legend']            = "RSC Newsletter Erinnerung";
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderDeadline']           = array('Stichtag', 'Wählen Sie den Tag des Monats, wann die Erinnerung gesendet werden soll.');
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderLeadtime']           = array('Vorlaufzeit', 'Wählen Sie die Anzahl Tage, wann die Erinnerung vor dem Stichtag gesendet werden soll.');
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderReceiverGroups']     = array('Empfängergruppe(n)', 'Wählen Sie die Mitgliedergruppe(n), für welche die Newsletter Erinnerung gesendet werden soll.');
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderEmailSenderAddress'] = array('Absenderadresse', 'Bitte geben Sie die E-Mail-Adresse für den Absender ein.');
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderEmailSenderName']    = array('Absendername', 'Bitte geben Sie einen individuellen Namen für den Absender ein.');
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderEmailSubject']       = array('E-Mail Betreff', 'Geben Sie den Betreff für die E-Mail ein. Die Verwendung von Inserttags ist möglich.');
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderEmailContent']       = array('E-Mail Inhalt', 'Geben Sie den HTML Inhalt für die E-Mail ein. Dieser wird automatisch als Text umgewandelt. So sind HTML und Text Emails gewährleistet. Die Verwendung von Inserttags ist möglich.');
 
 /**
  * options

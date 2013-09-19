@@ -56,8 +56,8 @@ class RscNewsletterReminder extends Backend
 
 			$objEmail->logFile = 'RscNewsletterReminderEmail.log';
 			
-			$objEmail->from = $GLOBALS['TL_CONFIG']['adminEmail'];
-			$objEmail->fromName = $GLOBALS['TL_CONFIG']['websiteTitle'];
+			$objEmail->from = $GLOBALS['TL_CONFIG']['rscNewsletterReminderEmailSenderAddress'];
+			$objEmail->fromName = (strlen($GLOBALS['TL_CONFIG']['rscNewsletterReminderEmailSenderName']) > 0) ? $GLOBALS['TL_CONFIG']['rscNewsletterReminderEmailSenderName'] : $GLOBALS['TL_CONFIG']['websiteTitle'];
 			$objEmail->subject = $this->replaceEmailInsertTags($GLOBALS['TL_CONFIG']['rscNewsletterReminderEmailSubject']);
 			$objEmail->html = $this->replaceEmailInsertTags($GLOBALS['TL_CONFIG']['rscNewsletterReminderEmailContent']);
 			$objEmail->text = $this->transformEmailHtmlToText($objEmail->html);
@@ -194,7 +194,7 @@ class RscNewsletterReminder extends Backend
 		return ceil(($deadline - $today) / 3600 / 24);
 	}
 	
-		/**
+	/**
 	 * Replaces the additional efg inserttags 
 	 */
 	public function replaceExternalInserttags($strTag)
