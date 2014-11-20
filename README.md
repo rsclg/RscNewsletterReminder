@@ -1,14 +1,14 @@
 Contao Extension: RscNewsletterReminder
 =======================================
 
-Sendet eine Erinnerungsmail an konfigurierte Gruppen bzgl. der RSC Newsletters.
+Sends monthly a reminder email to configured groups regarding the RSC newsletter and provides inserttags to display the dealine.
 
 
 Installation
 ------------
 
 The extension is not published in contao extension repository.
-Install it manually.
+Install it manually or via [composer](https://packagist.org/packages/rsclg/newsletter-reminder).
 
 
 Tracker
@@ -21,7 +21,7 @@ Compatibility
 -------------
 
 - min. version: Contao 2.9.5
-- max. version: Contao 2.9.5
+- max. version: Contao 3.4.x
 
 
 Inserttags
