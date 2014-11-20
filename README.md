@@ -24,6 +24,12 @@ Compatibility
 - max. version: Contao 3.4.x
 
 
+Dependency
+----------
+
+- There are no dependencies to other extensions, that have to be installed.
+
+
 Inserttags
 ----------
 
