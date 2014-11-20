@@ -24,7 +24,7 @@
 	"extra":{
 		"contao":{
 			"sources":{
-				"system/modules/DocumentManagementSystem":"system/modules/DocumentManagementSystem",
+				"system/modules/RscNewsletterReminder":"system/modules/RscNewsletterReminder"
 			}
 		},
 		"branch-alias": {
