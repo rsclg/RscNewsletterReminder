@@ -81,7 +81,7 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['rscNewsletterReminderEmailSubject']
 	'label'                   => &$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderEmailSubject'],
 	'inputType'               => 'text',
 	'reference'               => &$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder']['help']['inserttags'],
-	'eval'                    => array('mandatory'=>true, 'allowHtml'=>true, 'helpwizard'=>true, 'tl_class'=>'clr')
+	'eval'                    => array('mandatory'=>true, 'allowHtml'=>true, 'helpwizard'=>true, 'tl_class'=>'clr long')
 );
 
 $GLOBALS['TL_DCA']['tl_settings']['fields']['rscNewsletterReminderEmailContent'] = array
