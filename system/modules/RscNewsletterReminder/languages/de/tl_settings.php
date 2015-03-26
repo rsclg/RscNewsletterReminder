@@ -21,7 +21,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2012-2013
+ * @copyright  Cliff Parnitzky 2012-2015
  * @author     Cliff Parnitzky
  * @package    RscNewsletterReminder
  * @license    LGPL
@@ -50,8 +50,9 @@ $GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminderLeadtime']['14'] = '2 W
 /**
  * help messages
  */
-$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder']['help']['inserttags']['headline']        = array('<u>Inserttags</u>', 'Folgende Inserttags können verwendet werden:');
-$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder']['help']['inserttags']['config_deadline'] = array('<i>{{config::deadline}}</i>', 'Dieses Tag liefert den Stichtag als Zahlwert.');
-$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder']['help']['inserttags']['config_leadtime'] = array('<i>{{config::leadtime}}</i>', 'Dieses Tag liefert den Wert der Vorlaufzeit.');
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder']['help']['inserttags']['headline']             = array('<u>Inserttags</u>', 'Folgende Inserttags können verwendet werden:');
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder']['help']['inserttags']['config_deadline']      = array('<i>{{config::deadline}}</i>', 'Dieses Tag liefert den Stichtag als Zahlwert.');
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder']['help']['inserttags']['config_deadline_date'] = array('<i>{{config::deadline::date}}</i>', 'Dieses Tag liefert den nächsten Stichtag als Datum.');
+$GLOBALS['TL_LANG']['tl_settings']['rscNewsletterReminder']['help']['inserttags']['config_leadtime']      = array('<i>{{config::leadtime}}</i>', 'Dieses Tag liefert den Wert der Vorlaufzeit.');
 
 ?>
