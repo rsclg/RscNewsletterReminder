@@ -1,6 +1,6 @@
 {
 	"name":"rsclg/newsletter-reminder",
-	"description":"Sends monthly a reminder email to configured groups regarding the RSC newsletter and provides inserttags to display the dealine.",
+	"description":"Sends monthly a reminder email to configured groups regarding the RSC newsletter and provides inserttags to display the deadline.",
 	"keywords":["contao", "newsletter", "reminder"],
 	"type":"contao-module",
 	"license":"LGPL-3.0+",
@@ -18,8 +18,12 @@
 	},
 	"require":{
 		"php":">=5.3",
-		"contao/core":">=2.9.5,<4.0.0-dev",
-		"contao-community-alliance/composer-installer":"*"
+		"contao/core":">=3.2.0,<3.5",
+		"contao-community-alliance/composer-installer":"*",
+		"contao-legacy/associategroups":">=1.2.1"
+	},
+	"conflict": {
+		"contao/core":"3.4.0,3.4.1,3.4.2"
 	},
 	"extra":{
 		"contao":{

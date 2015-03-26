@@ -1,14 +1,19 @@
+[![Latest Version on Packagist](http://img.shields.io/packagist/v/rsclg/newsletter-reminder.svg?style=flat)](https://packagist.org/packages/rsclg/newsletter-reminder)
+[![Installations via composer per month](http://img.shields.io/packagist/dm/rsclg/newsletter-reminder.svg?style=flat)](https://packagist.org/packages/rsclg/newsletter-reminder)
+[![Installations via composer total](http://img.shields.io/packagist/dt/rsclg/newsletter-reminder.svg?style=flat)](https://packagist.org/packages/rsclg/newsletter-reminder)
+
 Contao Extension: RscNewsletterReminder
 =======================================
 
-Sends monthly a reminder email to configured groups regarding the RSC newsletter and provides inserttags to display the dealine.
+Sends monthly a reminder email to configured groups regarding the RSC newsletter and provides inserttags to display the deadline.
 
 
 Installation
 ------------
 
-The extension is not published in contao extension repository.
-Install it manually or via [composer](https://packagist.org/packages/rsclg/newsletter-reminder).
+Install the extension via composer: [rsclg/newsletter-reminder](https://packagist.org/packages/rsclg/newsletter-reminder).
+
+If you prefer to install it manually, download the latest release here: https://github.com/rsclg/RscNewsletterReminder/releases
 
 
 Tracker
@@ -20,19 +25,19 @@ https://github.com/rsclg/RscNewsletterReminder/issues
 Compatibility
 -------------
 
-- min. version: Contao 2.9.5
-- max. version: Contao 3.4.x
+- min. Contao version: >= 3.2.0
+- max. Contao version: <  3.5.0
 
 
 Dependency
 ----------
 
-- There are no dependencies to other extensions, that have to be installed.
+- This extension is dependent on the following extensions: [[contao-legacy/associategroups]](https://legacy-packages-via.contao-community-alliance.org/packages/contao-legacy/associategroups)
 
 
 Inserttags
 ----------
 
-- `{{rscnewsletter::remainingdays}}` - Liefert die Anzahl Tage bis zum nächsten Versand (Stichtag).
-- `{{rscnewsletter::deadline}}` - Liefert den Stichtag.
-- `{{rscnewsletter::deadline::date}}` - Liefert den nächsten Stichtag als Datum (Formatiert nach dem System Datumsformat).
+- `{{rscnewsletter::remainingdays}}` - Returns the number of days until the next sending (deadline).
+- `{{rscnewsletter::deadline}}` - Returns the deadline.
+- `{{rscnewsletter::deadline::date}}` - Returns the next deadline date (formatted with system date format).

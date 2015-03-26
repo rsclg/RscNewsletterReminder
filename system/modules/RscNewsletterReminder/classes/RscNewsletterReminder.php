@@ -1,8 +1,8 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2013 Leo Feyer
+ * Copyright (C) 2005-2015 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,22 +21,35 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2012-2013
+ * @copyright  Cliff Parnitzky 2012-2015
  * @author     Cliff Parnitzky
  * @package    RscNewsletterReminder
  * @license    LGPL
  */
 
 /**
+ * Run in a custom namespace, so the class can be replaced
+ */
+namespace RSC;
+
+/**
  * Class RscNewsletterReminder
  *
  * Provide methods to send an email to definined member groups when executed.
- * @copyright  Cliff Parnitzky 2012
+ * @copyright  Cliff Parnitzky 2015
  * @author     Cliff Parnitzky
  * @package    RscNewsletterReminder
  */
-class RscNewsletterReminder extends Backend
+class RscNewsletterReminder extends \Backend
 {
+	/**
+	 * Constructor, initialize the object.
+	 */
+	public function __construct() {
+		parent::__construct();
+		$this->import('Database');
+	}
+	
 	/**
 	 * Sends a reminder mail to definined member groups.
 	 */
@@ -52,7 +65,7 @@ class RscNewsletterReminder extends Backend
 		$this->loadLanguageFile("tl_settings");
 		
 		if ($this->timeleadReached()) {
-			$objEmail = new Email();
+			$objEmail = new \Email();
 
 			$objEmail->logFile = 'RscNewsletterReminderEmail.log';
 			
