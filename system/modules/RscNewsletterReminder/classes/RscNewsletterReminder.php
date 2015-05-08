@@ -75,8 +75,6 @@ class RscNewsletterReminder extends \Backend
 			$objEmail->html = $this->replaceEmailInsertTags($GLOBALS['TL_CONFIG']['rscNewsletterReminderEmailContent']);
 			$objEmail->text = $this->transformEmailHtmlToText($objEmail->html);
 			
-			$this->log($objEmail->text, 'RscNewsletterReminder sendReminderMail()', TL_CRON);
-			
 			try
 			{
 				$objEmail->sendTo($this->getReceiverEmails());
