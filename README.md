@@ -26,13 +26,15 @@ Compatibility
 -------------
 
 - min. Contao version: >= 3.2.0
-- max. Contao version: <  3.5.0
+- max. Contao version: <  3.6.0
 
 
 Dependency
 ----------
 
-- This extension is dependent on the following extensions: [[contao-legacy/associategroups]](https://legacy-packages-via.contao-community-alliance.org/packages/contao-legacy/associategroups)
+This extension is dependent on the following extensions:
+
+- [[friends-of-contao/contao-associategroups]](https://packagist.org/packages/friends-of-contao/contao-associategroups)
 
 
 Inserttags
